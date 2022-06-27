@@ -8,7 +8,7 @@
       "request": "attach",
       "port": 6009,
       "sourceMaps": true,
-      "outFiles": ["${workspaceRoot}/out/server/**/*.ts"],
+      "outFiles": ["${workspaceRoot}/../vscode-yaml/dist/**/*.js"],
       "protocol": "inspector",
       "trace": true
     },
@@ -20,10 +20,7 @@
       "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
       "args": ["-u", "bdd", "--timeout", "999999", "--colors", "-r", "ts-node/register", "${workspaceRoot}/test/*.test.ts"],
       "preLaunchTask": "watch typescript",
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/**",
-        "!**/node_modules/**"
-      ],
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
     },
     // A launch configuration that compiles the server and runs mocha unit tests
     {
@@ -34,10 +31,7 @@
       "args": ["-u", "bdd", "--timeout", "999999", "--colors", "-r", "ts-node/register", "${workspaceRoot}/${relativeFile}"],
       "preLaunchTask": "watch typescript",
       "sourceMaps": true,
-      "resolveSourceMapLocations": [
-        "${workspaceFolder}/**",
-        "!**/node_modules/**"
-      ],
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
     }
   ]
 }

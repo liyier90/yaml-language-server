@@ -6,8 +6,9 @@
     {
       "label": "watch typescript",
       "type": "shell",
-      "command": "yarn run watch",
+      "command": "npm run watch",
       "presentation": {
+        "panel": "dedicated",
         "reveal": "never"
       },
       "isBackground": true,
